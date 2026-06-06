@@ -276,6 +276,15 @@
         // Draw original background picture frame
         ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
 
+        // Draw copyright text on canvas
+ctx.save();
+ctx.fillStyle = "#ffffff"; // Set color to white
+ctx.font = "bold 14px 'Courier New'"; // Set font size and style
+ctx.textAlign = "center"; // Center the text horizontally
+// This places it near the bottom of the canvas, just above the paddle area
+ctx.fillText("©DibyenduDeb", canvas.width / 2, canvas.height * 0.85); 
+ctx.restore();
+    
         // Dark block overlay layer masking uncleared blocks
         ctx.save();
         ctx.fillStyle = "#16162a"; 
